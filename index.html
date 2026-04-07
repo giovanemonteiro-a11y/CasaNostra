@@ -1,365 +1,1270 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Casa Nostra Pizza Express | Delivery em Bocaíva – MG</title>
-  <meta name="description" content="A pizza mais gostosa de Bocaíva direto na sua porta. Receitas exclusivas do Chef Ronaldo, molho caseiro artesanal e a entrega mais rápida da cidade. Peça agora pelo WhatsApp!" />
-  <meta property="og:title" content="Casa Nostra Pizza Express | Delivery em Bocaíva" />
-  <meta property="og:description" content="Receitas exclusivas, molho caseiro artesanal e entrega rápida. A pizza que Bocaíva escolheu há mais de 10 anos." />
-  <meta property="og:type" content="website" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Casa Nostra Pizza Express — A Pizza que Bocaíva Escolheu</title>
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/styles.css" />
-
-  <!-- JSON-LD LocalBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Casa Nostra Pizza Express",
-    "description": "Pizzaria delivery artesanal com receitas exclusivas e entrega rápida em Bocaíva, MG.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bocaíva",
-      "addressRegion": "MG",
-      "addressCountry": "BR"
-    },
-    "servesCuisine": "Pizza",
-    "priceRange": "$$",
-    "openingHours": "Mo-Su 18:00-23:00",
-    "sameAs": ["https://www.instagram.com/casanostrapizzaexpress"]
-  }
-  </script>
+  <!-- CSS (template files — obter do pacote TESTO PIZZA DEMO-5) -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.0/css/all.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/flexslider.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/jquery.datetimepicker.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Customizações Casa Nostra -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ===================== NAV ===================== -->
-  <nav class="nav" id="nav">
-    <div class="nav__inner container">
-      <a href="#hero" class="nav__logo" aria-label="Casa Nostra – Início">
-        <span class="nav__logo-text">Casa Nostra</span>
-        <span class="nav__logo-sub">Pizza Express</span>
-      </a>
-      <button class="nav__hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav__links" id="navLinks">
-        <li><a href="#cardapio" class="nav__link">Cardápio</a></li>
-        <li><a href="#como-funciona" class="nav__link">Como Pedir</a></li>
-        <li><a href="#avaliacoes" class="nav__link">Avaliações</a></li>
-        <li>
-          <a href="https://wa.me/5538XXXXXXXXX?text=Oi%21+Quero+fazer+um+pedido+na+Casa+Nostra" target="_blank" rel="noopener" class="btn btn--gold nav__cta">
-            Fazer Pedido
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+<!-- LOADER -->
+<div id="loader-wrapper"><div id="loader"></div></div>
 
-  <!-- ===================== HERO ===================== -->
-  <section class="hero" id="hero">
-    <div class="hero__overlay"></div>
-    <div class="hero__content container">
-      <p class="hero__eyebrow">BOCAÍVA · NORTE DE MINAS · DESDE 2013</p>
-      <h1 class="hero__title">A Pizza que Bocaíva<br>Escolheu por Mais<br>de 10 Anos</h1>
-      <p class="hero__subtitle">Receitas exclusivas do Chef Ronaldo. Molho artesanal feito na hora.<br>Entrega rápida para você curtir sem sair de casa.</p>
-      <div class="hero__ctas">
-        <a href="https://wa.me/5538XXXXXXXXX?text=Oi%21+Quero+fazer+um+pedido+na+Casa+Nostra" target="_blank" rel="noopener" class="btn btn--gold btn--lg">
-          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Pedir pelo WhatsApp
+<!-- PAGE CONTENT WRAPPER -->
+<div id="page" class="page">
+
+
+<!-- ============================================================
+  HEADER
+============================================================ -->
+<header id="header-1" class="header navik-header header-shadow center-menu-1 header-transparent viewport-lg">
+  <div class="container">
+    <div class="navik-header-container">
+
+      <!-- Botão de telefone (esquerda) -->
+      <div class="callusbtn">
+        <a href="tel:+5538XXXXXXXXX"><i class="fas fa-phone"></i></a>
+      </div>
+
+      <!-- LOGO (centro) -->
+      <div class="logo">
+        <a href="#hero-5"><img src="images/logo-02.png" alt="Casa Nostra Pizza Express"></a>
+      </div>
+
+      <!-- Burger menu (mobile) -->
+      <div class="burger-menu">
+        <div class="line-menu line-half first-line"></div>
+        <div class="line-menu"></div>
+        <div class="line-menu line-half last-line"></div>
+      </div>
+
+      <!-- NAVEGAÇÃO -->
+      <nav class="navik-menu menu-caret navik-yellow">
+        <ul>
+
+          <!-- Menu LEFT side -->
+          <li class="drop-menu">
+            <a href="#">Cardápio <span class="menu-caret-ico"></span></a>
+            <ul>
+              <li><a href="#menu-6">Pizzas</a></li>
+              <li><a href="#menu-9">Pratos & Acompanhamentos</a></li>
+              <li><a href="#promo-5">Destaques da Casa</a></li>
+            </ul>
+          </li>
+          <li class="drop-menu">
+            <a href="#">Sobre <span class="menu-caret-ico"></span></a>
+            <ul>
+              <li><a href="#about-3">Nossa História</a></li>
+              <li><a href="#reviews">Avaliações</a></li>
+            </ul>
+          </li>
+          <li class="drop-menu">
+            <a href="#">Blog <span class="menu-caret-ico"></span></a>
+            <ul>
+              <li><a href="#blog-1">Notícias & Dicas</a></li>
+            </ul>
+          </li>
+
+          <!-- Menu RIGHT side -->
+          <li class="drop-menu">
+            <a href="#">Locais <span class="menu-caret-ico"></span></a>
+            <ul>
+              <li><a href="#locations">Bocaíva — Delivery</a></li>
+            </ul>
+          </li>
+          <li class="drop-menu">
+            <a href="#">Promoções <span class="menu-caret-ico"></span></a>
+            <ul>
+              <li><a href="#promo-1">Peça Agora</a></li>
+              <li><a href="#banner-3">Programa de Fidelidade</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://wa.me/5538XXXXXXXXX?text=Oi%21+Quero+fazer+um+pedido+na+Casa+Nostra" target="_blank">Pedir</a>
+          </li>
+
+          <!-- CART ICON -->
+          <li>
+            <div class="basket-ico ico-30">
+              <a href="https://wa.me/5538XXXXXXXXX?text=Oi%21+Quero+fazer+um+pedido+na+Casa+Nostra" target="_blank">
+                <span class="ico-holder">
+                  <span class="flaticon-shopping-bag"></span>
+                  <em class="roundpoint">0</em>
+                </span>
+              </a>
+            </div>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div><!-- /.navik-header-container -->
+  </div><!-- /.container -->
+</header>
+
+
+<!-- ============================================================
+  SEÇÃO 1 — HERO
+  Fundo: images/hero-5.jpg
+============================================================ -->
+<section id="hero-5" class="hero-section">
+  <div class="bg-fixed bg-inner division">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="hero-5-txt text-center white-color">
+            <h2>PIZZA</h2>
+            <div class="hero-5-img">
+              <img class="img-fluid" src="images/hero-5-img.png" alt="Casa Nostra Pizza">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-fixed white-overlay-wave"></div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+  SEÇÃO 2 — ABOUT-7 (3 Features Icons)
+============================================================ -->
+<section id="about-7" class="about-section division">
+  <div class="container">
+    <div class="abox-4-wrapper ico-80">
+      <div class="row">
+
+        <div class="col-md-4 col-lg-4">
+          <div class="abox-4 text-center mb-40 coffee-color">
+            <div class="abox-4-ico"><span class="flaticon-pizza-4"></span></div>
+            <h5 class="h5-lg">Ingredientes Selecionados</h5>
+            <p>Usamos apenas ingredientes frescos e de qualidade premium em cada pizza. Receitas exclusivas do Chef Ronaldo há mais de 10 anos.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <div class="abox-4 text-center mb-40 coffee-color">
+            <div class="abox-4-ico"><span class="flaticon-salad"></span></div>
+            <h5 class="h5-lg">Molho Artesanal</h5>
+            <p>Nosso molho é feito diariamente na casa, nunca de lata. É esse cuidado que faz toda a diferença em cada garfada.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <div class="abox-4 text-center mb-40 coffee-color">
+            <div class="abox-4-ico"><span class="flaticon-moped"></span></div>
+            <h5 class="h5-lg">Entrega Expressa</h5>
+            <p>A entrega mais rápida de Bocaíva. Sua pizza sai do forno e chega quente na sua porta no menor tempo possível.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+  SEÇÃO 3 — ABOUT-3 (Fundo Amarelo)
+============================================================ -->
+<section id="about-3" class="bg-yellow wide-60 about-section division">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+
+      <div class="col-md-5 col-lg-6">
+        <div class="about-3-img text-center mb-40">
+          <img class="img-fluid" src="images/about-02-img.png" alt="Casa Nostra Pizza Artesanal">
+        </div>
+      </div>
+
+      <div class="col-md-7 col-lg-6">
+        <div class="about-3-txt mb-40 coffee-color">
+
+          <h2 class="h2-sm coffee-color">Tradição que se sente em cada fatia</h2>
+          <p class="p-md grey-color">Há mais de 10 anos, a marca Casa Nostra é sinônimo de pizza de qualidade em Bocaíva, MG. Agora no formato delivery, trazemos a mesma receita exclusiva do Chef Ronaldo direto para a sua porta — com agilidade, sem abrir mão do sabor artesanal que você já conhece e ama.</p>
+
+          <div class="abox-2-wrapper ico-70">
+            <div class="row text-center">
+
+              <div class="col-sm-3">
+                <div class="abox-2">
+                  <div class="abox-2-ico"><span class="flaticon-pizza-slice"></span></div>
+                  <h6 class="h6-lg">Pizzas</h6>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="abox-2">
+                  <div class="abox-2-ico"><span class="flaticon-dinner"></span></div>
+                  <h6 class="h6-lg">Parmigianas</h6>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="abox-2">
+                  <div class="abox-2-ico"><span class="flaticon-salad"></span></div>
+                  <h6 class="h6-lg">Pratos</h6>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="abox-2">
+                  <div class="abox-2-ico"><span class="flaticon-dessert"></span></div>
+                  <h6 class="h6-lg">Bebidas</h6>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+  SEÇÃO 4 — MENU-6 (8 Cards de Pizzas)
+============================================================ -->
+<section id="menu-6" class="wide-70 menu-section division">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <div class="section-title mb-60 text-center">
+          <h2 class="h2-xl red-color">Sabores que Conquistam</h2>
+          <p class="p-xl">Cada pizza é preparada com ingredientes frescos, molho artesanal e a receita exclusiva que faz da Casa Nostra referência em Bocaíva há mais de 10 anos.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <!-- CARD 1 — Pizza de Camarão -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="menu-6-item bg-white">
+          <div class="menu-6-img rel">
+            <div class="hover-overlay">
+              <img class="img-fluid" src="images/menu/pizza-11.jpg" alt="Pizza de Camarão">
+              <span class="item-code bg-tra-dark">Cód: CN-001</span>
+              <div class="menu-img-zoom ico-25">
+                <a href="images/menu/pizza-11.jpg" class="image-link">
+                  <span class="flaticon-zoom"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-6-txt rel">
+            <div class="item-rating">
+              <div class="stars-rating stars-lg">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="like-ico ico-25">
+              <a href="#"><span class="flaticon-heart"></span></a>
+            </div>
+            <h5 class="h5-sm coffee-color">Pizza de Camarão</h5>
+            <p class="grey-color">Camarões frescos, molho artesanal, queijo derretido, temperos especiais</p>
+            <div class="menu-6-price bg-coffee">
+              <h5 class="h5-xs yellow-color">R$ 75,00</h5>
+            </div>
+            <div class="add-to-cart bg-yellow ico-10">
+              <a href="https://wa.me/5538XXXXXXXXX?text=Quero+pedir+a+Pizza+de+Camar%C3%A3o" target="_blank">
+                <span class="flaticon-shopping-bag"></span> Pedir Agora
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 — Pizza de Filé Mignon -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="menu-6-item bg-white">
+          <div class="menu-6-img rel">
+            <div class="hover-overlay">
+              <img class="img-fluid" src="images/menu/pizza-12.jpg" alt="Pizza de Filé Mignon">
+              <span class="item-code bg-tra-dark">Cód: CN-002</span>
+              <div class="menu-img-zoom ico-25">
+                <a href="images/menu/pizza-12.jpg" class="image-link">
+                  <span class="flaticon-zoom"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-6-txt rel">
+            <div class="item-rating">
+              <div class="stars-rating stars-lg">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="like-ico ico-25">
+              <a href="#"><span class="flaticon-heart"></span></a>
+            </div>
+            <h5 class="h5-sm coffee-color">Pizza de Filé Mignon</h5>
+            <p class="grey-color">Medalhões de filé mignon, molho especial da casa, queijo selecionado</p>
+            <div class="menu-6-price bg-coffee">
+              <h5 class="h5-xs yellow-color">R$ 72,00</h5>
+            </div>
+            <div class="add-to-cart bg-yellow ico-10">
+              <a href="https://wa.me/5538XXXXXXXXX?text=Quero+pedir+a+Pizza+de+Fil%C3%A9+Mignon" target="_blank">
+                <span class="flaticon-shopping-bag"></span> Pedir Agora
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 — Frango com Catupiry -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="menu-6-item bg-white">
+          <div class="menu-6-img rel">
+            <div class="hover-overlay">
+              <img class="img-fluid" src="images/menu/pizza-13.jpg" alt="Pizza Frango com Catupiry">
+              <span class="item-code bg-tra-dark">Cód: CN-003</span>
+              <div class="menu-img-zoom ico-25">
+                <a href="images/menu/pizza-13.jpg" class="image-link">
+                  <span class="flaticon-zoom"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-6-txt rel">
+            <div class="item-rating">
+              <div class="stars-rating stars-lg">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="like-ico ico-25">
+              <a href="#"><span class="flaticon-heart"></span></a>
+            </div>
+            <h5 class="h5-sm coffee-color">Frango com Catupiry</h5>
+            <p class="grey-color">Frango desfiado temperado na casa, catupiry cremoso, ponto certo de forno</p>
+            <div class="menu-6-price bg-coffee">
+              <h5 class="h5-xs yellow-color">R$ 58,00</h5>
+            </div>
+            <div class="add-to-cart bg-yellow ico-10">
+              <a href="https://wa.me/5538XXXXXXXXX?text=Quero+pedir+a+Pizza+Frango+com+Catupiry" target="_blank">
+                <span class="flaticon-shopping-bag"></span> Pedir Agora
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 — Calabresa Artesanal -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="menu-6-item bg-white">
+          <div class="menu-6-img rel">
+            <div class="hover-overlay">
+              <img class="img-fluid" src="images/menu/pizza-14.jpg" alt="Pizza Calabresa">
+              <span class="item-code bg-tra-dark">Cód: CN-004</span>
+              <div class="menu-img-zoom ico-25">
+                <a href="images/menu/pizza-14.jpg" class="image-link">
+                  <span class="flaticon-zoom"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-6-txt rel">
+            <div class="item-rating">
+              <div class="stars-rating stars-lg">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <div class="like-ico ico-25">
+              <a href="#"><span class="flaticon-heart"></span></a>
+            </div>
+            <h5 class="h5-sm coffee-color">Calabresa Artesanal</h5>
+            <p class="grey-color">Calabresa artesanal, cebola caramelizada, molho da casa, simples e irresistível</p>
+            <div class="menu-6-price bg-coffee">
+              <h5 class="h5-xs yellow-color">R$ 50,00</h5>
+            </div>
+            <div class="add-to-cart bg-yellow ico-10">
+              <a href="https://wa.me/5538XXXXXXXXX?text=Quero+pedir+a+Pizza+Calabresa" target="_blank">
+                <span class="flaticon-shopping-bag"></span> Pedir Agora
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5 — À Moda da Casa -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="menu-6-item bg-white">
+          <div class="menu-6-img rel">
+            <div class="hover-overlay">
+              <img class="img-fluid" src="images/menu/pizza-15.jpg" alt="Pizza À Moda da Casa">
+              <span class="item-code bg-tra-dark">Cód: CN-005</span>
+              <div class="menu-img-zoom ico-25">
+                <a href="images/menu/pizza-15.jpg" class="image-link">
+                  <span class="flaticon-zoom"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-6-txt rel">
+            <div class="item-rating">
+              <div class="stars-rating stars-lg">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="like-ico ico-25">
+              <a href="#"><span class="flaticon-heart"></span></a>
+            </div>
+            <h5 class="h5-sm coffee-color">À Moda da Casa</h5>
+            <p class="grey-color">Criação semanal do Chef Ronaldo. Pergunte o sabor de hoje — pode surpreender!</p>
+            <div class="menu-6-price bg-coffee">
+              <h5 class="h5-xs yellow-color">R$ 65,00</h5>
+            </div>
+            <div class="add-to-cart bg-yellow ico-10">
+              <a href="https://wa.me/5538XXXXXXXXX?text=Qual+o+sabor+da+pizza+%C3%80+Moda+de+hoje%3F" target="_blank">
+                <span class="flaticon-shopping-bag"></span> Pedir Agora
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6 — Margherita Premium -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="menu-6-item bg-white">
+          <div class="menu-6-img rel">
+            <div class="hover-overlay">
+              <img class="img-fluid" src="images/menu/pizza-16.jpg" alt="Pizza Margherita">
+              <span class="item-code bg-tra-dark">Cód: CN-006</span>
+              <div class="menu-img-zoom ico-25">
+                <a href="images/menu/pizza-16.jpg" class="image-link">
+                  <span class="flaticon-zoom"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-6-txt rel">
+            <div class="item-rating">
+              <div class="stars-rating stars-lg">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <div class="like-ico ico-25">
+              <a href="#"><span class="flaticon-heart"></span></a>
+            </div>
+            <h5 class="h5-sm coffee-color">Margherita Premium</h5>
+            <p class="grey-color">Molho artesanal, mussarela fresca, tomate, manjericão fresco, azeite extra virgem</p>
+            <div class="menu-6-price bg-coffee">
+              <h5 class="h5-xs yellow-color">R$ 48,00</h5>
+            </div>
+            <div class="add-to-cart bg-yellow ico-10">
+              <a href="https://wa.me/5538XXXXXXXXX?text=Quero+pedir+a+Pizza+Margherita" target="_blank">
+                <span class="flaticon-shopping-bag"></span> Pedir Agora
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 7 — Portuguesa -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="menu-6-item bg-white">
+          <div class="menu-6-img rel">
+            <div class="hover-overlay">
+              <img class="img-fluid" src="images/menu/pizza-17.jpg" alt="Pizza Portuguesa">
+              <span class="item-code bg-tra-dark">Cód: CN-007</span>
+              <div class="menu-img-zoom ico-25">
+                <a href="images/menu/pizza-17.jpg" class="image-link">
+                  <span class="flaticon-zoom"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-6-txt rel">
+            <div class="item-rating">
+              <div class="stars-rating stars-lg">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="like-ico ico-25">
+              <a href="#"><span class="flaticon-heart"></span></a>
+            </div>
+            <h5 class="h5-sm coffee-color">Portuguesa</h5>
+            <p class="grey-color">Presunto, ovos, cebola, azeitona, queijo, molho artesanal — um clássico sempre bem-vindo</p>
+            <div class="menu-6-price bg-coffee">
+              <h5 class="h5-xs yellow-color">R$ 52,00</h5>
+            </div>
+            <div class="add-to-cart bg-yellow ico-10">
+              <a href="https://wa.me/5538XXXXXXXXX?text=Quero+pedir+a+Pizza+Portuguesa" target="_blank">
+                <span class="flaticon-shopping-bag"></span> Pedir Agora
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 8 — Quatro Queijos -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="menu-6-item bg-white">
+          <div class="menu-6-img rel">
+            <div class="hover-overlay">
+              <img class="img-fluid" src="images/menu/pizza-18.jpg" alt="Pizza Quatro Queijos">
+              <span class="item-code bg-tra-dark">Cód: CN-008</span>
+              <div class="menu-img-zoom ico-25">
+                <a href="images/menu/pizza-18.jpg" class="image-link">
+                  <span class="flaticon-zoom"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="menu-6-txt rel">
+            <div class="item-rating">
+              <div class="stars-rating stars-lg">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <div class="like-ico ico-25">
+              <a href="#"><span class="flaticon-heart"></span></a>
+            </div>
+            <h5 class="h5-sm coffee-color">Quatro Queijos</h5>
+            <p class="grey-color">Mussarela, gorgonzola, parmesão, catupiry — para quem é apaixonado por queijo</p>
+            <div class="menu-6-price bg-coffee">
+              <h5 class="h5-xs yellow-color">R$ 56,00</h5>
+            </div>
+            <div class="add-to-cart bg-yellow ico-10">
+              <a href="https://wa.me/5538XXXXXXXXX?text=Quero+pedir+a+Pizza+Quatro+Queijos" target="_blank">
+                <span class="flaticon-shopping-bag"></span> Pedir Agora
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+  SEÇÃO 5 — PROMO-1 (3 Promo Boxes)
+============================================================ -->
+<section id="promo-1" class="promo-section division">
+  <div class="container-fluid">
+    <div class="row d-flex align-items-center">
+
+      <!-- PROMO BOX 1 -->
+      <div class="col-md-4 col-lg-3">
+        <div id="pb-1-1" class="pbox-1 bg-fixed">
+          <div class="pbox-1-txt white-color">
+            <h3 class="h3-sm">Nossa História</h3>
+            <p class="p-lg">Tradição de mais de 10 anos em Bocaíva</p>
+            <a href="#about-3" class="btn btn-red tra-white-hover">Saiba Mais</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROMO BOX 2 (grande, centro) -->
+      <div class="col-md-4 col-lg-6">
+        <div id="pb-1-2" class="pbox-1 bg-fixed">
+          <div class="pbox-1-txt white-color">
+            <h3 class="h3-sm">Peça Agora</h3>
+            <p class="p-lg">Delivery rápido direto no seu WhatsApp — sem complicação</p>
+            <a href="https://wa.me/5538XXXXXXXXX?text=Oi%21+Quero+fazer+um+pedido+na+Casa+Nostra" target="_blank" class="btn btn-red tra-white-hover">Fazer Pedido</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROMO BOX 3 -->
+      <div class="col-md-4 col-lg-3">
+        <div id="pb-1-3" class="pbox-1 bg-fixed">
+          <div class="pbox-1-txt white-color">
+            <h3 class="h3-sm">Fidelidade</h3>
+            <p class="p-lg">Acumule pontos a cada pedido e ganhe prêmios</p>
+            <a href="#banner-3" class="btn btn-red tra-white-hover">Ver Programa</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+  SEÇÃO 6 — PROMO-5 (Destaques da Casa)
+============================================================ -->
+<section id="promo-5" class="wide-100 promo-section division">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <div class="section-title mb-60 text-center">
+          <h2 class="h2-xl red-color">Destaques da Casa</h2>
+          <p class="p-xl">Nossas criações mais amadas pelos clientes de Bocaíva. Experimente e entenda por que a Casa Nostra é a primeira escolha.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row d-flex align-items-center">
+
+      <!-- BOX GRANDE (esquerda) — Pizza de Camarão em destaque -->
+      <div class="col-lg-6">
+        <a href="https://wa.me/5538XXXXXXXXX?text=Quero+pedir+a+Pizza+de+Camar%C3%A3o" target="_blank">
+          <div id="pb-5-1" class="pbox-5 bg-lightgrey">
+            <div class="pbox-5-txt">
+              <h4 class="h4-xs coffee-color">Pizza de Camarão</h4>
+              <span class="item-code">Cód: CN-001</span>
+              <div class="pbox-5-img text-center mt-25 rel">
+                <img class="img-fluid" src="images/menu/pizza-04.png" alt="Pizza de Camarão Destaque">
+                <div class="price-badge-sm bg-fixed">
+                  <div class="badge-txt">
+                    <h5 class="h5-sm">Apenas</h5>
+                    <h4 class="h4-md">R$ 75</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </a>
-        <a href="#cardapio" class="btn btn--ghost btn--lg">Ver o cardápio</a>
       </div>
-      <div class="hero__trust">
-        <div class="trust-item">
-          <span class="trust-item__icon">⚡</span>
-          <span>Entrega Expressa</span>
+
+      <!-- BOX PEQUENO 1 (direita topo) — Filé Mignon -->
+      <div class="col-sm-6 col-lg-3">
+        <a href="https://wa.me/5538XXXXXXXXX?text=Quero+pedir+a+Pizza+de+Fil%C3%A9+Mignon" target="_blank">
+          <div id="pb-5-2" class="pbox-5">
+            <div class="pbox-5-txt">
+              <h4 class="h4-xs coffee-color">Pizza Filé Mignon</h4>
+              <span class="item-code">Cód: CN-002</span>
+              <div class="pbox-5-img text-center mt-25">
+                <img class="img-fluid" src="images/menu/pizza-06.png" alt="Pizza Filé Mignon">
+              </div>
+              <div class="pbox-5-price">
+                <p>Média 35cm <span class="red-color"> R$ 72,00</span></p>
+                <p>Grande 45cm <span class="red-color"> R$ 88,00</span></p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- BOX PEQUENO 2 (direita baixo) — Frango Catupiry -->
+      <div class="col-sm-6 col-lg-3">
+        <a href="https://wa.me/5538XXXXXXXXX?text=Quero+pedir+a+Pizza+Frango+com+Catupiry" target="_blank">
+          <div id="pb-5-3" class="pbox-5">
+            <div class="pbox-5-txt">
+              <h4 class="h4-xs coffee-color">Frango c/ Catupiry</h4>
+              <span class="item-code">Cód: CN-003</span>
+              <div class="pbox-5-img text-center mt-25">
+                <img class="img-fluid" src="images/menu/pizza-03.png" alt="Pizza Frango Catupiry">
+              </div>
+              <div class="pbox-5-price">
+                <p>Média 35cm <span class="red-color"> R$ 58,00</span></p>
+                <p>Grande 45cm <span class="red-color"> R$ 72,00</span></p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+  SEÇÃO 7 — BANNER-3 (Programa de Fidelidade / Cardápio Digital)
+  Fundo: bg-yellow
+============================================================ -->
+<section id="banner-3" class="bg-yellow banner-section division">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+
+      <div class="col-md-7 col-lg-6">
+        <div class="banner-3-txt coffee-color">
+          <h4 class="h4-xl">Peça pelo nosso cardápio digital e</h4>
+          <h2>acumule pontos a cada pedido</h2>
+          <p class="p-md">Cada pizza pedida pelo nosso cardápio digital rende pontos que você pode trocar por produtos incríveis. Cadastre-se, peça e aproveite!</p>
+          <div class="stores-badge">
+            <a href="https://wa.me/5538XXXXXXXXX?text=Quero+saber+mais+sobre+o+programa+de+fidelidade" target="_blank" class="btn btn-red tra-coffee-hover">
+              <i class="fas fa-gift"></i> Ver Programa de Fidelidade
+            </a>
+          </div>
         </div>
-        <div class="trust-item">
-          <span class="trust-item__icon">🍅</span>
-          <span>Molho Caseiro</span>
+      </div>
+
+      <div class="col-md-5 col-lg-6">
+        <div class="banner-3-img">
+          <img class="img-fluid" src="images/e-shop.png" alt="Cardápio Digital Casa Nostra">
         </div>
-        <div class="trust-item">
-          <span class="trust-item__icon">👨‍🍳</span>
-          <span>Receita Exclusiva</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+  SEÇÃO 8 — MENU-9 (4 Pratos Especiais / Acompanhamentos)
+============================================================ -->
+<section id="menu-9" class="wide-50 menu-section division">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <div class="section-title mb-60 text-center">
+          <h2 class="h2-xl red-color">Pratos & Acompanhamentos</h2>
+          <p class="p-xl">Além das pizzas artesanais, temos pratos que são verdadeiras atrações. Experimente nossas parmigianas e muito mais.</p>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ===================== PAIN ===================== -->
-  <section class="pain" id="pain">
-    <div class="container">
-      <p class="section-eyebrow">SEXTA-FEIRA, 19H</p>
-      <h2 class="section-title">Depois de um dia longo, a última coisa que você quer é decidir o que jantar</h2>
-      <div class="pain__content">
-        <p>Você chega em casa, a família está com fome e a geladeira não inspira. Pede delivery e vem pizza fria, massa sem graça, ingredientes que parecem de ontem.</p>
-        <p>Você merece algo que funciona de verdade — gostoso, rápido, e que faz todo mundo feliz na mesa.</p>
-        <p class="pain__transition">É exatamente para isso que a Casa Nostra existe.</p>
+    <div class="row">
+
+      <!-- PRATO 1 — Parmigiana de Filé -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="menu-7-item">
+          <div class="menu-7-img rel">
+            <img class="img-fluid" src="images/menu/side-01.png" alt="Parmigiana de Filé Mignon">
+            <div class="menu-7-price bg-coffee">
+              <h5 class="h5-xs yellow-color">R$ 45,00</h5>
+            </div>
+            <div class="item-rating">
+              <div class="stars-rating stars-lg">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="like-ico ico-20">
+              <a href="#"><span class="flaticon-heart"></span></a>
+            </div>
+          </div>
+          <div class="menu-7-txt rel">
+            <h5 class="h5-sm coffee-color">Parmigiana de Filé</h5>
+            <p class="grey-color">Filé empanado na casa, molho artesanal, parmesão gratinado</p>
+            <a href="https://wa.me/5538XXXXXXXXX?text=Quero+pedir+a+Parmigiana+de+Fil%C3%A9" target="_blank" class="btn btn-sm btn-tra-grey yellow-hover">
+              <span class="flaticon-shopping-bag"></span> Pedir Agora
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRATO 2 — Esfiha de Carne -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="menu-7-item">
+          <div class="menu-7-img rel">
+            <img class="img-fluid" src="images/menu/side-02.png" alt="Esfiha de Carne">
+            <div class="menu-7-price bg-coffee">
+              <h5 class="h5-xs yellow-color">R$ 8,00</h5>
+            </div>
+            <div class="item-rating">
+              <div class="stars-rating stars-lg">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <div class="like-ico ico-20">
+              <a href="#"><span class="flaticon-heart"></span></a>
+            </div>
+          </div>
+          <div class="menu-7-txt rel">
+            <h5 class="h5-sm coffee-color">Esfiha de Carne</h5>
+            <p class="grey-color">Massa artesanal, recheio de carne temperada na casa</p>
+            <a href="https://wa.me/5538XXXXXXXXX?text=Quero+pedir+Esfiha" target="_blank" class="btn btn-sm btn-tra-grey yellow-hover">
+              <span class="flaticon-shopping-bag"></span> Pedir Agora
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRATO 3 — Calzone -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="menu-7-item">
+          <div class="menu-7-img rel">
+            <img class="img-fluid" src="images/menu/side-03.png" alt="Calzone da Casa">
+            <div class="menu-7-price bg-coffee">
+              <h5 class="h5-xs yellow-color">R$ 38,00</h5>
+            </div>
+            <div class="item-rating">
+              <div class="stars-rating stars-lg">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="like-ico ico-20">
+              <a href="#"><span class="flaticon-heart"></span></a>
+            </div>
+          </div>
+          <div class="menu-7-txt rel">
+            <h5 class="h5-sm coffee-color">Calzone da Casa</h5>
+            <p class="grey-color">Recheio especial do Chef Ronaldo, massa artesanal crocante</p>
+            <a href="https://wa.me/5538XXXXXXXXX?text=Quero+pedir+o+Calzone" target="_blank" class="btn btn-sm btn-tra-grey yellow-hover">
+              <span class="flaticon-shopping-bag"></span> Pedir Agora
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRATO 4 — Frango Grelhado -->
+      <div class="col-sm-6 col-lg-3">
+        <div class="menu-7-item">
+          <div class="menu-7-img rel">
+            <img class="img-fluid" src="images/menu/side-04.png" alt="Filé Grelhado">
+            <div class="menu-7-price bg-coffee">
+              <h5 class="h5-xs yellow-color">R$ 42,00</h5>
+            </div>
+            <div class="item-rating">
+              <div class="stars-rating stars-lg">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <div class="like-ico ico-20">
+              <a href="#"><span class="flaticon-heart"></span></a>
+            </div>
+          </div>
+          <div class="menu-7-txt rel">
+            <h5 class="h5-sm coffee-color">Filé Grelhado</h5>
+            <p class="grey-color">Filé grelhado ao ponto, acompanhado de fritas e salada</p>
+            <a href="https://wa.me/5538XXXXXXXXX?text=Quero+pedir+o+Fil%C3%A9+Grelhado" target="_blank" class="btn btn-sm btn-tra-grey yellow-hover">
+              <span class="flaticon-shopping-bag"></span> Pedir Agora
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+  SEÇÃO 9 — BRANDS-1 (Parceiros / Certificações)
+  Fundo: bg-lightgrey
+============================================================ -->
+<div id="brands-1" class="bg-lightgrey brands-section division">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="brands-carousel-5 owl-carousel owl-theme">
+          <div class="brand-logo"><img src="images/brand-13.png" alt="parceiro"></div>
+          <div class="brand-logo"><img src="images/brand-14.png" alt="parceiro"></div>
+          <div class="brand-logo"><img src="images/brand-15.png" alt="parceiro"></div>
+          <div class="brand-logo"><img src="images/brand-16.png" alt="parceiro"></div>
+          <div class="brand-logo"><img src="images/brand-17.png" alt="parceiro"></div>
+          <div class="brand-logo"><img src="images/brand-18.png" alt="parceiro"></div>
+          <div class="brand-logo"><img src="images/brand-11.png" alt="parceiro"></div>
+          <div class="brand-logo"><img src="images/brand-12.png" alt="parceiro"></div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- ===================== BRAND ===================== -->
-  <section class="brand" id="sobre">
-    <div class="container">
-      <div class="brand__grid">
-        <div class="brand__text">
-          <p class="section-eyebrow">NOSSA HISTÓRIA</p>
-          <h2 class="section-title">Tradição de Família.<br>Velocidade Moderna.</h2>
-          <p>Há mais de 10 anos na mesa das famílias de Bocaíva, a Casa Nostra nasceu com um propósito: trazer a autenticidade da pizza artesanal sem abrir mão da praticidade do delivery.</p>
-          <p>Cada pizza sai do nosso forno com o molho feito hoje — nunca de lata — e a receita que só o Chef Ronaldo conhece.</p>
-          <ul class="brand__bullets">
-            <li class="brand__bullet">
-              <span class="bullet__check">✓</span>
-              <span>Molho 100% caseiro, preparado todo dia</span>
-            </li>
-            <li class="brand__bullet">
-              <span class="bullet__check">✓</span>
-              <span>Receitas exclusivas há mais de 10 anos</span>
-            </li>
-            <li class="brand__bullet">
-              <span class="bullet__check">✓</span>
-              <span>3 tamanhos para cada apetite</span>
-            </li>
-            <li class="brand__bullet">
-              <span class="bullet__check">✓</span>
-              <span>Entrega mais rápida de Bocaíva</span>
-            </li>
+
+<!-- ============================================================
+  SEÇÃO 10 — REVIEWS (Avaliações de Clientes)
+  Fundo: images/reviews.jpg (bg-scroll/parallax)
+============================================================ -->
+<section id="reviews" class="reviews-section division">
+  <div class="bg-scroll overlay-cover" style="background-image: url(images/reviews.jpg);">
+    <div class="container white-color">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <div class="section-title mb-60 text-center">
+            <h2 class="h2-xl white-color">O Que Nossos Clientes Dizem</h2>
+            <p class="p-xl white-color">A família Casa Nostra cresce a cada semana. Veja o que nossos clientes de Bocaíva têm a dizer.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="review-1">
+            <div class="author-data clearfix">
+              <div class="reviewer-avatar">
+                <img src="images/review-author-1.jpg" alt="cliente" class="img-fluid">
+              </div>
+              <div class="review-author">
+                <h6 class="h6-xl">Ana Paula M.</h6>
+                <p>Cliente fiel há 8 meses</p>
+                <div class="stars-rating stars-lg yellow-color">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="review-text">
+              <p>"Pedimos toda sexta-feira. A pizza de camarão é diferente de qualquer outra que já comi em Bocaíva. E sempre chega quentinha!"</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="review-1">
+            <div class="author-data clearfix">
+              <div class="reviewer-avatar">
+                <img src="images/review-author-2.jpg" alt="cliente" class="img-fluid">
+              </div>
+              <div class="review-author">
+                <h6 class="h6-xl">Ricardo T.</h6>
+                <p>Cliente há 1 ano</p>
+                <div class="stars-rating stars-lg yellow-color">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="review-text">
+              <p>"O molho não é de lata — dá pra sentir a diferença logo na primeira garfada. Casa Nostra é outro nível em Bocaíva."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="review-1">
+            <div class="author-data clearfix">
+              <div class="reviewer-avatar">
+                <img src="images/review-author-3.jpg" alt="cliente" class="img-fluid">
+              </div>
+              <div class="review-author">
+                <h6 class="h6-xl">Família Ferreira</h6>
+                <p>Clientes fiéis</p>
+                <div class="stars-rating stars-lg yellow-color">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="review-text">
+              <p>"Três filhos e todo fim de semana a unanimidade é Casa Nostra. Facilidade de pedir no WhatsApp e entrega rápida mesmo!"</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+  SEÇÃO 11 — BANNER-4 (Entrega em 30 Minutos)
+  Fundo: images/banner-4.jpg
+============================================================ -->
+<section id="banner-4" class="banner-section division">
+  <div class="bg-fixed" style="background-image: url(images/banner-4.jpg);">
+    <div class="container white-color">
+      <div class="row d-flex align-items-center">
+        <div class="col-md-8 col-lg-7">
+          <div class="banner-4-txt">
+            <h2 class="h2-xl white-color">Entrega mais rápida de Bocaíva</h2>
+            <p class="p-xl white-color">Do nosso forno até a sua porta com a maior agilidade da cidade. Peça agora e experimente a diferença.</p>
+            <a href="https://wa.me/5538XXXXXXXXX?text=Oi%21+Quero+fazer+um+pedido+na+Casa+Nostra" target="_blank" class="btn btn-red tra-white-hover">Fazer Pedido Agora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+  SEÇÃO 12 — GALLERY (Galeria de Fotos)
+============================================================ -->
+<section id="gallery" class="wide-60 gallery-section division">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <div class="section-title mb-60 text-center">
+          <h2 class="h2-xl red-color">Nossa Galeria</h2>
+          <p class="p-xl">Cada foto conta um pedaço da nossa história. Pizza artesanal feita com cuidado, ingredientes frescos e muito amor.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row gallery-items">
+      <div class="col-sm-6 col-md-3 gallery-item">
+        <div class="hover-overlay gallery-image">
+          <img class="img-fluid" src="images/gallery/img-01.jpg" alt="galeria">
+          <div class="item-overlay">
+            <a href="images/gallery/img-01.jpg" class="image-link">
+              <span class="flaticon-zoom"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 gallery-item">
+        <div class="hover-overlay gallery-image">
+          <img class="img-fluid" src="images/gallery/img-02.jpg" alt="galeria">
+          <div class="item-overlay">
+            <a href="images/gallery/img-02.jpg" class="image-link">
+              <span class="flaticon-zoom"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 gallery-item">
+        <div class="hover-overlay gallery-image">
+          <img class="img-fluid" src="images/gallery/img-03.jpg" alt="galeria">
+          <div class="item-overlay">
+            <a href="images/gallery/img-03.jpg" class="image-link">
+              <span class="flaticon-zoom"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 gallery-item">
+        <div class="hover-overlay gallery-image">
+          <img class="img-fluid" src="images/gallery/img-04.jpg" alt="galeria">
+          <div class="item-overlay">
+            <a href="images/gallery/img-04.jpg" class="image-link">
+              <span class="flaticon-zoom"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 gallery-item">
+        <div class="hover-overlay gallery-image">
+          <img class="img-fluid" src="images/gallery/img-05.jpg" alt="galeria">
+          <div class="item-overlay">
+            <a href="images/gallery/img-05.jpg" class="image-link">
+              <span class="flaticon-zoom"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 gallery-item">
+        <div class="hover-overlay gallery-image">
+          <img class="img-fluid" src="images/gallery/img-06.jpg" alt="galeria">
+          <div class="item-overlay">
+            <a href="images/gallery/img-06.jpg" class="image-link">
+              <span class="flaticon-zoom"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 gallery-item">
+        <div class="hover-overlay gallery-image">
+          <img class="img-fluid" src="images/gallery/img-07.jpg" alt="galeria">
+          <div class="item-overlay">
+            <a href="images/gallery/img-07.jpg" class="image-link">
+              <span class="flaticon-zoom"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3 gallery-item">
+        <div class="hover-overlay gallery-image">
+          <img class="img-fluid" src="images/gallery/img-08.jpg" alt="galeria">
+          <div class="item-overlay">
+            <a href="images/gallery/img-08.jpg" class="image-link">
+              <span class="flaticon-zoom"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+  SEÇÃO 13 — LOCATIONS (Localização)
+============================================================ -->
+<section id="locations" class="wide-60 contacts-section division">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <div class="section-title mb-60 text-center">
+          <h2 class="h2-xl red-color">Onde Estamos</h2>
+          <p class="p-xl">Delivery em toda Bocaíva e região. Peça pelo WhatsApp e receba em casa.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-12 col-lg-4">
+        <div class="location-1">
+          <div class="location-1-img">
+            <img class="img-fluid" src="images/location-1.jpg" alt="Bocaíva Delivery">
+          </div>
+          <div class="location-1-txt">
+            <h5 class="h5-sm coffee-color">Casa Nostra Pizza Express</h5>
+            <p class="grey-color">Bocaíva, Minas Gerais<br>Norte de Minas Gerais</p>
+            <p><i class="fas fa-clock red-color"></i> Seg–Dom: 18h às 23h</p>
+            <a href="https://wa.me/5538XXXXXXXXX" target="_blank" class="btn btn-sm btn-red">
+              <i class="fab fa-whatsapp"></i> Fazer Pedido
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 col-lg-8">
+        <div class="google-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60440!2d-43.812!3d-17.105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa61cfa0f3b8601%3A0x68b65f43c5d78e7!2sBoca%C3%ADva%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+            width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+  SEÇÃO 14 — FOOTER
+============================================================ -->
+<footer id="footer-1" class="footer division">
+  <div class="container">
+
+    <div class="row">
+
+      <!-- LOGO + DESCRIÇÃO -->
+      <div class="col-md-6 col-lg-4">
+        <div class="footer-box mb-40">
+          <div class="footer-logo mb-25">
+            <a href="#hero-5"><img src="images/logo-02.png" alt="Casa Nostra Pizza Express" height="60"></a>
+          </div>
+          <p>Tradição familiar de mais de 10 anos em Bocaíva. Receitas exclusivas do Chef Ronaldo, molho artesanal e a entrega mais rápida da cidade.</p>
+          <div class="footer-socials ico-25 mt-20">
+            <a href="https://www.instagram.com/casanostrapizzaexpress" target="_blank" rel="noopener">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5538XXXXXXXXX" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/casanostrapizzaexpress" target="_blank" rel="noopener">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- LINKS ÚTEIS -->
+      <div class="col-md-6 col-lg-2">
+        <div class="footer-box mb-40">
+          <h6 class="h6-xl">Links Úteis</h6>
+          <ul class="footer-links">
+            <li><a href="#about-3">Nossa História</a></li>
+            <li><a href="#menu-6">Pizzas</a></li>
+            <li><a href="#menu-9">Outros Pratos</a></li>
+            <li><a href="#reviews">Avaliações</a></li>
+            <li><a href="#gallery">Galeria</a></li>
+            <li><a href="#locations">Localização</a></li>
           </ul>
         </div>
-        <div class="brand__visual">
-          <div class="brand__badge">
-            <span class="brand__badge-number">+10</span>
-            <span class="brand__badge-label">anos servindo<br>Bocaíva</span>
+      </div>
+
+      <!-- HORÁRIOS -->
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-box mb-40">
+          <h6 class="h6-xl">Horário de Funcionamento</h6>
+          <ul class="footer-links">
+            <li class="clearfix">
+              <span class="fl-left">Segunda–Quinta</span>
+              <span class="fl-right">18h–23h</span>
+            </li>
+            <li class="clearfix">
+              <span class="fl-left">Sexta–Domingo</span>
+              <span class="fl-right">18h–23h</span>
+            </li>
+          </ul>
+          <p class="mt-20"><i class="fas fa-info-circle red-color"></i> Entregamos em toda Bocaíva e região.</p>
+        </div>
+      </div>
+
+      <!-- CONTATO -->
+      <div class="col-md-6 col-lg-3">
+        <div class="footer-box mb-40">
+          <h6 class="h6-xl">Contato</h6>
+          <p><i class="fas fa-map-marker-alt red-color"></i> Bocaíva, MG — Norte de Minas Gerais</p>
+          <p>
+            <a href="https://wa.me/5538XXXXXXXXX" target="_blank">
+              <i class="fab fa-whatsapp" style="color: #25D366;"></i> (38) XXXXX-XXXX
+            </a>
+          </p>
+          <p>
+            <a href="https://www.instagram.com/casanostrapizzaexpress" target="_blank">
+              <i class="fab fa-instagram red-color"></i> @casanostrapizzaexpress
+            </a>
+          </p>
+          <div class="mt-20">
+            <a href="https://wa.me/5538XXXXXXXXX?text=Oi%21+Quero+fazer+um+pedido+na+Casa+Nostra" target="_blank" class="btn btn-red">
+              <i class="fab fa-whatsapp"></i> Pedir Agora
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="bottom-footer">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="footer-copyright text-center">
+            <p>© 2026 <span>Casa Nostra Pizza Express</span>. Todos os direitos reservados. | Bocaíva, MG</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ===================== MENU ===================== -->
-  <section class="menu" id="cardapio">
-    <div class="container">
-      <p class="section-eyebrow">NOSSO CARDÁPIO</p>
-      <h2 class="section-title">Feito para Conquistar</h2>
-      <p class="section-subtitle">Cada sabor é uma experiência que você vai querer repetir toda semana.</p>
+  </div>
+</footer>
 
-      <div class="menu__grid">
 
-        <article class="menu-card">
-          <div class="menu-card__img menu-card__img--camarao" role="img" aria-label="Pizza de Camarão"></div>
-          <div class="menu-card__body">
-            <h3 class="menu-card__name">Pizza de Camarão</h3>
-            <p class="menu-card__desc">Camarões frescos sobre nosso molho artesanal, queijo derretido e temperos que remetem ao litoral. Uma combinação inesquecível.</p>
-          </div>
-        </article>
 
-        <article class="menu-card">
-          <div class="menu-card__img menu-card__img--file" role="img" aria-label="Pizza de Filé Mignon"></div>
-          <div class="menu-card__body">
-            <h3 class="menu-card__name">Pizza de Filé Mignon</h3>
-            <p class="menu-card__desc">Medalhões de filé mignon sobre nossa base especial. Maciez e sabor em cada fatia — a escolha de quem aprecia o premium.</p>
-          </div>
-        </article>
+<!-- ============================================================
+  BOTÃO WHATSAPP FLUTUANTE
+============================================================ -->
+<a href="https://wa.me/5538XXXXXXXXX?text=Oi%21+Quero+fazer+um+pedido+na+Casa+Nostra" 
+   target="_blank" rel="noopener" class="wa-fixed" aria-label="Pedir pelo WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span>Pedir Agora</span>
+</a>
 
-        <article class="menu-card">
-          <div class="menu-card__img menu-card__img--frango" role="img" aria-label="Pizza Frango com Catupiry"></div>
-          <div class="menu-card__body">
-            <h3 class="menu-card__name">Frango com Catupiry</h3>
-            <p class="menu-card__desc">O clássico que nunca decepciona: frango desfiado temperado na casa, catupiry cremoso e ponto certo de forno.</p>
-          </div>
-        </article>
+</div><!-- /#page -->
 
-        <article class="menu-card">
-          <div class="menu-card__img menu-card__img--calabresa" role="img" aria-label="Pizza Calabresa"></div>
-          <div class="menu-card__body">
-            <h3 class="menu-card__name">Calabresa Artesanal</h3>
-            <p class="menu-card__desc">Calabresa artesanal, cebola caramelizada no ponto, molho da casa. Simples, irresistível e sempre na medida certa.</p>
-          </div>
-        </article>
 
-        <article class="menu-card">
-          <div class="menu-card__img menu-card__img--moda" role="img" aria-label="Pizza à Moda"></div>
-          <div class="menu-card__body">
-            <h3 class="menu-card__name">À Moda da Casa</h3>
-            <p class="menu-card__desc">A criação da semana, direto da imaginação do Chef Ronaldo. Pergunte o sabor de hoje — pode surpreender.</p>
-            <span class="menu-card__badge">Sabor surpresa</span>
-          </div>
-        </article>
+<!-- ============================================================
+  JS FILES (obter do pacote TESTO PIZZA DEMO-5)
+============================================================ -->
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/jquery.appear.js"></script>
+<script src="js/jquery.scrollto.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/contact-form.js"></script>
+<script src="js/booking-form.js"></script>
+<script src="js/jquery.datetimepicker.full.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/custom.js"></script>
 
-        <article class="menu-card">
-          <div class="menu-card__img menu-card__img--parmigiana" role="img" aria-label="Parmigiana de Filé Mignon"></div>
-          <div class="menu-card__body">
-            <h3 class="menu-card__name">Parmigiana de Filé</h3>
-            <p class="menu-card__desc">Não é pizza, mas disputa o título. Filé mignon empanado na casa, molho de tomate artesanal, parmesão gratinado. Um prato que vicia.</p>
-          </div>
-        </article>
-
-      </div>
-
-      <p class="menu__sizes">Pizzas disponíveis em 3 tamanhos: <strong>Pequena · Média · Grande</strong></p>
-
-      <div class="menu__cta">
-        <a href="https://wa.me/5538XXXXXXXXX?text=Oi%21+Quero+ver+o+card%C3%A1pio+completo" target="_blank" rel="noopener" class="btn btn--gold btn--lg">
-          Ver Cardápio Completo
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== REVIEWS ===================== -->
-  <section class="reviews" id="avaliacoes">
-    <div class="container">
-      <p class="section-eyebrow">O QUE NOSSOS CLIENTES DIZEM</p>
-      <h2 class="section-title">A Família Que Cresce Todo Dia</h2>
-
-      <div class="reviews__grid">
-
-        <article class="review-card">
-          <div class="review-card__stars" aria-label="5 estrelas">★★★★★</div>
-          <blockquote class="review-card__text">
-            "Pedimos toda sexta-feira. A pizza de camarão é diferente de qualquer outra que já comi em Bocaíva. E sempre chega quente!"
-          </blockquote>
-          <p class="review-card__author">— Ana Paula M.</p>
-        </article>
-
-        <article class="review-card">
-          <div class="review-card__stars" aria-label="5 estrelas">★★★★★</div>
-          <blockquote class="review-card__text">
-            "Já tentei outros deliveries, mas a Casa Nostra tem um nível à parte. O molho não é de lata, dá pra sentir a diferença logo na primeira garfada."
-          </blockquote>
-          <p class="review-card__author">— Ricardo T.</p>
-        </article>
-
-        <article class="review-card">
-          <div class="review-card__stars" aria-label="5 estrelas">★★★★★</div>
-          <blockquote class="review-card__text">
-            "Três filhos e todo fim de semana a unanimidade é Casa Nostra. Facilidade de pedir no WhatsApp e entrega rápida mesmo."
-          </blockquote>
-          <p class="review-card__author">— Família Ferreira</p>
-        </article>
-
-      </div>
-
-      <div class="reviews__badge">
-        <span>+10 anos servindo Bocaíva</span>
-        <span class="reviews__sep">·</span>
-        <span>⭐ Avaliação 5 estrelas no Google</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== HOW IT WORKS ===================== -->
-  <section class="how" id="como-funciona">
-    <div class="container">
-      <p class="section-eyebrow">SEM COMPLICAÇÃO</p>
-      <h2 class="section-title">Pedir é Simples Assim</h2>
-
-      <div class="how__steps">
-
-        <div class="how__step">
-          <div class="how__step-num" aria-hidden="true">1</div>
-          <h3 class="how__step-title">Escolha</h3>
-          <p class="how__step-desc">Veja o cardápio digital ou mande uma mensagem no WhatsApp dizendo o que você quer.</p>
-        </div>
-
-        <div class="how__arrow" aria-hidden="true">→</div>
-
-        <div class="how__step">
-          <div class="how__step-num" aria-hidden="true">2</div>
-          <h3 class="how__step-title">Confirme</h3>
-          <p class="how__step-desc">Alinhamos o pedido, tamanho e endereço. Tudo pelo WhatsApp, sem app extra, sem fila.</p>
-        </div>
-
-        <div class="how__arrow" aria-hidden="true">→</div>
-
-        <div class="how__step">
-          <div class="how__step-num" aria-hidden="true">3</div>
-          <h3 class="how__step-title">Receba</h3>
-          <p class="how__step-desc">Sua pizza fresquinha chega na sua porta no menor tempo de Bocaíva. Garantido.</p>
-        </div>
-
-      </div>
-
-      <div class="how__cta">
-        <a href="https://wa.me/5538XXXXXXXXX?text=Oi%21+Quero+fazer+um+pedido+na+Casa+Nostra" target="_blank" rel="noopener" class="btn btn--gold">
-          Começar Meu Pedido
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== LOYALTY ===================== -->
-  <section class="loyalty" id="fidelidade">
-    <div class="container">
-      <div class="loyalty__card">
-        <div class="loyalty__icon" aria-hidden="true">🎁</div>
-        <div class="loyalty__text">
-          <p class="section-eyebrow">PROGRAMA DE FIDELIDADE</p>
-          <h2 class="loyalty__title">Cada pedido vale pontos.<br>Pontos viram pizza.</h2>
-          <p class="loyalty__desc">No nosso cardápio digital você acumula pontos a cada pedido. É nossa forma de dizer obrigado pra quem escolhe a Casa Nostra toda semana.</p>
-          <a href="https://wa.me/5538XXXXXXXXX?text=Quero+saber+mais+sobre+o+programa+de+fidelidade" target="_blank" rel="noopener" class="btn btn--gold">
-            Acessar Cardápio e Acumular Pontos
-          </a>
-          <p class="loyalty__note">Programa exclusivo para pedidos pelo cardápio digital</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== FINAL CTA ===================== -->
-  <section class="final-cta" id="pedir">
-    <div class="final-cta__overlay"></div>
-    <div class="container final-cta__content">
-      <h2 class="final-cta__title">Hoje o jantar<br>está resolvido.</h2>
-      <p class="final-cta__sub">Escolha sua pizza favorita e receba em casa. Rápido, gostoso e sem complicação.</p>
-      <a href="https://wa.me/5538XXXXXXXXX?text=Oi%21+Quero+fazer+um+pedido+na+Casa+Nostra" target="_blank" rel="noopener" class="btn btn--gold btn--xl">
-        <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Fazer Meu Pedido Agora
-      </a>
-      <p class="final-cta__hours">WhatsApp · Segunda a Domingo · 18h às 23h</p>
-    </div>
-  </section>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <p class="footer__logo">Casa Nostra</p>
-        <p class="footer__tagline">Pizza Express</p>
-        <p class="footer__address">Bocaíva, MG · Norte de Minas Gerais</p>
-      </div>
-      <div class="footer__links">
-        <a href="https://www.instagram.com/casanostrapizzaexpress" target="_blank" rel="noopener" class="footer__link">
-          Instagram
-        </a>
-        <a href="https://wa.me/5538XXXXXXXXX" target="_blank" rel="noopener" class="footer__link">
-          WhatsApp
-        </a>
-      </div>
-      <p class="footer__copy">© 2026 Casa Nostra Pizza Express. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <!-- ===================== FLOATING WHATSAPP ===================== -->
-  <a
-    href="https://wa.me/5538XXXXXXXXX?text=Oi%21+Quero+fazer+um+pedido+na+Casa+Nostra"
-    target="_blank"
-    rel="noopener"
-    class="wa-float"
-    id="waFloat"
-    aria-label="Pedir pelo WhatsApp"
-  >
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    <span class="wa-float__label">Pedir Agora</span>
-  </a>
-
-  <script src="js/main.js"></script>
 </body>
 </html>

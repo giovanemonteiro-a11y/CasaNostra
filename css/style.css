@@ -1,0 +1,42 @@
+/*
+ * Casa Nostra Pizza Express
+ * Customizações sobre o template TESTO PIZZA DEMO-5
+ * Mantém a estrutura original; apenas ajustes de conteúdo
+ */
+
+/* ---- Ajuste hero: garantir que o overlay amarelo não cubra o texto ---- */
+#hero-5 .hero-5-txt h2 {
+  opacity: 0.12; /* título gigante decorativo — ajuste conforme o template */
+}
+
+/* ---- WhatsApp CTA flutuante (complementar ao template) ---- */
+.wa-fixed {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wa-fixed:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(37,211,102,0.5);
+  color: #fff;
+  text-decoration: none;
+}
+
+.wa-fixed i {
+  font-size: 18px;
+}
