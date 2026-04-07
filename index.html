@@ -12,18 +12,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS (template files — obter do pacote TESTO PIZZA DEMO-5) -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Bootstrap CDN (fallback para preview sem o pacote do template) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.0/css/all.css">
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/menu.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
   <link rel="stylesheet" href="css/flexslider.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
-  <!-- Customizações Casa Nostra -->
+  <!-- CSS de preview (substitui style.css, flaticon.css, menu.css do template) -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -1248,8 +1249,8 @@
 <!-- ============================================================
   JS FILES (obter do pacote TESTO PIZZA DEMO-5)
 ============================================================ -->
-<script src="js/jquery-3.5.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/modernizr.custom.js"></script>
 <script src="js/jquery.easing.js"></script>
 <script src="js/jquery.appear.js"></script>
@@ -1257,14 +1258,52 @@
 <script src="js/menu.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/jquery.flexslider.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 <script src="js/contact-form.js"></script>
 <script src="js/booking-form.js"></script>
 <script src="js/jquery.datetimepicker.full.js"></script>
-<script src="js/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
 <script src="js/jquery.ajaxchimp.min.js"></script>
 <script src="js/custom.js"></script>
+
+
+<script>
+// Sticky header on scroll
+$(function() {
+  $(window).on('scroll', function() {
+    if ($(this).scrollTop() > 80) {
+      $('#header-1').addClass('sticky').removeClass('header-transparent');
+    } else {
+      $('#header-1').removeClass('sticky').addClass('header-transparent');
+    }
+  });
+
+  // Owl carousel for brands
+  if ($('.brands-carousel-5').length) {
+    $('.brands-carousel-5').owlCarousel({
+      loop: true, margin: 20, nav: false, dots: false, autoplay: true,
+      responsive: { 0: {items:2}, 480: {items:3}, 768: {items:5}, 992: {items:6} }
+    });
+  }
+
+  // Magnific popup for gallery
+  if ($('.image-link').length) {
+    $('.gallery-items').magnificPopup({
+      delegate: '.image-link', type: 'image', gallery: { enabled: true }
+    });
+  }
+
+  // Smooth scroll
+  $('a[href^="#"]').on('click', function(e) {
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: target.offset().top - 80 }, 600);
+    }
+  });
+});
+</script>
 
 </body>
 </html>
